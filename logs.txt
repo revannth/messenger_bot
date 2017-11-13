@@ -1,0 +1,101 @@
+2017-11-13T05:09:21.517111+00:00 app[web.1]: NameError: global name 'request' is not defined
+2017-11-13T05:09:21.517110+00:00 app[web.1]:     if request.args.get("hub.mode") == "subscribe" and request.args.get("hub.challenge"):
+2017-11-13T05:09:21.512408+00:00 heroku[router]: at=info method=GET path="/" host=ancient-reef-49335.herokuapp.com request_id=f88342ad-4042-4e3e-b371-2b9e6aa8f7b6 fwd="183.83.205.218" dyno=web.1 connect=0ms service=2ms status=500 bytes=456 protocol=https
+2017-11-13T05:09:34.349843+00:00 heroku[router]: at=info method=GET path="/" host=ancient-reef-49335.herokuapp.com request_id=fdede9c5-5bf7-46ab-bf32-7658ab77d576 fwd="183.83.205.218" dyno=web.1 connect=1ms service=3ms status=500 bytes=456 protocol=https
+2017-11-13T05:09:34.354361+00:00 app[web.1]: [2017-11-13 05:09:34,353] ERROR in app: Exception on / [GET]
+2017-11-13T05:09:34.354378+00:00 app[web.1]: Traceback (most recent call last):
+2017-11-13T05:09:34.354379+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+2017-11-13T05:09:34.354380+00:00 app[web.1]:     response = self.full_dispatch_request()
+2017-11-13T05:09:34.354382+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+2017-11-13T05:09:34.354383+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+2017-11-13T05:09:34.354382+00:00 app[web.1]:     rv = self.handle_user_exception(e)
+2017-11-13T05:09:34.354384+00:00 app[web.1]:     reraise(exc_type, exc_value, tb)
+2017-11-13T05:09:34.354385+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+2017-11-13T05:09:34.354385+00:00 app[web.1]:     rv = self.dispatch_request()
+2017-11-13T05:09:34.354386+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+2017-11-13T05:09:34.354387+00:00 app[web.1]:     return self.view_functions[rule.endpoint](**req.view_args)
+2017-11-13T05:09:34.354387+00:00 app[web.1]:   File "/app/main.py", line 17, in verify
+2017-11-13T05:09:34.354388+00:00 app[web.1]:     if request.args.get("hub.mode") == "subscribe" and request.args.get("hub.challenge"):
+2017-11-13T05:09:34.354389+00:00 app[web.1]: NameError: global name 'request' is not defined
+2017-11-13T05:11:22.329920+00:00 heroku[router]: at=info method=GET path="/?hub.mode=subscribe&hub.challenge=552065370&hub.verify_token=forconvergeconf2017" host=ancient-reef-49335.herokuapp.com request_id=94f0d7ac-a795-4f72-abdb-5e928c23dcea fwd="69.63.188.121" dyno=web.1 connect=2ms service=3ms status=500 bytes=456 protocol=https
+2017-11-13T05:11:22.328618+00:00 app[web.1]: [2017-11-13 05:11:22,328] ERROR in app: Exception on / [GET]
+2017-11-13T05:11:22.328638+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+2017-11-13T05:11:22.328641+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+2017-11-13T05:11:22.328642+00:00 app[web.1]:     rv = self.handle_user_exception(e)
+2017-11-13T05:11:22.328636+00:00 app[web.1]: Traceback (most recent call last):
+2017-11-13T05:11:22.328643+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+2017-11-13T05:11:22.328644+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+2017-11-13T05:11:22.328645+00:00 app[web.1]:     rv = self.dispatch_request()
+2017-11-13T05:11:22.328646+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+2017-11-13T05:11:22.328648+00:00 app[web.1]:     if request.args.get("hub.mode") == "subscribe" and request.args.get("hub.challenge"):
+2017-11-13T05:11:22.328644+00:00 app[web.1]:     reraise(exc_type, exc_value, tb)
+2017-11-13T05:11:22.328647+00:00 app[web.1]:   File "/app/main.py", line 17, in verify
+2017-11-13T05:11:22.328639+00:00 app[web.1]:     response = self.full_dispatch_request()
+2017-11-13T05:11:22.328647+00:00 app[web.1]:     return self.view_functions[rule.endpoint](**req.view_args)
+2017-11-13T05:11:22.328649+00:00 app[web.1]: NameError: global name 'request' is not defined
+2017-11-13T05:11:23.644398+00:00 heroku[router]: at=info method=GET path="/?hub.mode=subscribe&hub.challenge=1658176833&hub.verify_token=forconvergeconf2017" host=ancient-reef-49335.herokuapp.com request_id=c8946d02-fce7-4a8c-9c30-c9faa24c4227 fwd="173.252.124.199" dyno=web.1 connect=1ms service=3ms status=500 bytes=456 protocol=https
+2017-11-13T05:11:23.643276+00:00 app[web.1]: [2017-11-13 05:11:23,642] ERROR in app: Exception on / [GET]
+2017-11-13T05:11:23.643287+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+2017-11-13T05:11:23.643286+00:00 app[web.1]: Traceback (most recent call last):
+2017-11-13T05:11:23.643292+00:00 app[web.1]:     rv = self.handle_user_exception(e)
+2017-11-13T05:11:23.643288+00:00 app[web.1]:     response = self.full_dispatch_request()
+2017-11-13T05:11:23.643293+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+2017-11-13T05:11:23.643296+00:00 app[web.1]:     rv = self.dispatch_request()
+2017-11-13T05:11:23.643297+00:00 app[web.1]:     return self.view_functions[rule.endpoint](**req.view_args)
+2017-11-13T05:11:23.643296+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+2017-11-13T05:11:23.643291+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+2017-11-13T05:11:23.643294+00:00 app[web.1]:     reraise(exc_type, exc_value, tb)
+2017-11-13T05:11:23.643299+00:00 app[web.1]:     if request.args.get("hub.mode") == "subscribe" and request.args.get("hub.challenge"):
+2017-11-13T05:11:23.643295+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+2017-11-13T05:11:23.643298+00:00 app[web.1]:   File "/app/main.py", line 17, in verify
+2017-11-13T05:11:23.643299+00:00 app[web.1]: NameError: global name 'request' is not defined
+2017-11-13T05:11:24.638652+00:00 heroku[router]: at=info method=GET path="/?hub.mode=subscribe&hub.challenge=1953648048&hub.verify_token=forconvergeconf2017" host=ancient-reef-49335.herokuapp.com request_id=d2346c9d-0cf1-429c-844f-efe65898add8 fwd="173.252.124.81" dyno=web.1 connect=0ms service=5ms status=500 bytes=456 protocol=https
+2017-11-13T05:11:24.637066+00:00 app[web.1]: [2017-11-13 05:11:24,635] ERROR in app: Exception on / [GET]
+2017-11-13T05:11:24.637081+00:00 app[web.1]: Traceback (most recent call last):
+2017-11-13T05:11:24.637083+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+2017-11-13T05:11:24.637084+00:00 app[web.1]:     response = self.full_dispatch_request()
+2017-11-13T05:11:24.637085+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+2017-11-13T05:11:24.637085+00:00 app[web.1]:     rv = self.handle_user_exception(e)
+2017-11-13T05:11:24.637086+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+2017-11-13T05:11:24.637087+00:00 app[web.1]:     reraise(exc_type, exc_value, tb)
+2017-11-13T05:11:24.637088+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+2017-11-13T05:11:24.637089+00:00 app[web.1]:     rv = self.dispatch_request()
+2017-11-13T05:11:24.637090+00:00 app[web.1]:   File "/app/.heroku/python/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+2017-11-13T05:11:24.637091+00:00 app[web.1]:     return self.view_functions[rule.endpoint](**req.view_args)
+2017-11-13T05:11:24.637091+00:00 app[web.1]:   File "/app/main.py", line 17, in verify
+2017-11-13T05:11:24.637092+00:00 app[web.1]:     if request.args.get("hub.mode") == "subscribe" and request.args.get("hub.challenge"):
+2017-11-13T05:11:24.637093+00:00 app[web.1]: NameError: global name 'request' is not defined
+2017-11-13T05:15:01.974786+00:00 heroku[web.1]: State changed from up to starting
+2017-11-13T05:15:01.974145+00:00 heroku[web.1]: Restarting
+2017-11-13T05:15:02.887261+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2017-11-13T05:15:02.904643+00:00 app[web.1]: [2017-11-13 05:15:02 +0000] [4] [INFO] Handling signal: term
+2017-11-13T05:15:02.905940+00:00 app[web.1]: [2017-11-13 05:15:02 +0000] [9] [INFO] Worker exiting (pid: 9)
+2017-11-13T05:15:02.906293+00:00 app[web.1]: [2017-11-13 05:15:02 +0000] [11] [INFO] Worker exiting (pid: 11)
+2017-11-13T05:15:03.002158+00:00 app[web.1]: [2017-11-13 05:15:03 +0000] [4] [INFO] Shutting down: Master
+2017-11-13T05:15:03.147857+00:00 heroku[web.1]: Process exited with status 0
+2017-11-13T05:15:04.460831+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file=`
+2017-11-13T05:15:07.434755+00:00 app[web.1]: 
+2017-11-13T05:15:07.434788+00:00 app[web.1]: Error: Error: '' isn't writable [IOError(2, 'No such file or directory')]
+2017-11-13T05:15:07.434789+00:00 app[web.1]: 
+2017-11-13T05:15:07.588068+00:00 heroku[web.1]: State changed from starting to crashed
+2017-11-13T05:15:07.590308+00:00 heroku[web.1]: State changed from crashed to starting
+2017-11-13T05:15:07.569804+00:00 heroku[web.1]: Process exited with status 1
+2017-11-13T05:15:09.854259+00:00 heroku[web.1]: Starting process with command `gunicorn app:app --log-file=`
+2017-11-13T05:15:11.693084+00:00 app[web.1]: Error: Error: '' isn't writable [IOError(2, 'No such file or directory')]
+2017-11-13T05:15:11.693066+00:00 app[web.1]: 
+2017-11-13T05:15:11.693085+00:00 app[web.1]: 
+2017-11-13T05:15:11.762800+00:00 heroku[web.1]: Process exited with status 1
+2017-11-13T05:15:11.777974+00:00 heroku[web.1]: State changed from starting to crashed
+2017-11-13T05:15:23.056765+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=ancient-reef-49335.herokuapp.com request_id=0a6c9c02-66a0-4a1d-b789-8608356029f4 fwd="183.83.205.218" dyno= connect= service= status=503 bytes= protocol=https
+2017-11-13T05:15:30.836710+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=ancient-reef-49335.herokuapp.com request_id=ad68ca57-0cea-465a-8e02-114f99c6a2eb fwd="183.83.205.218" dyno= connect= service= status=503 bytes= protocol=https
+2017-11-13T05:15:32.226738+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=ancient-reef-49335.herokuapp.com request_id=0709bf75-bb55-4714-b22a-35536d5ef53f fwd="183.83.205.218" dyno= connect= service= status=503 bytes= protocol=https
+2017-11-13T05:15:55.073645+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/?hub.mode=subscribe&hub.challenge=327503680&hub.verify_token=forconvergeconf2017" host=ancient-reef-49335.herokuapp.com request_id=38903594-5960-415a-891e-36c501edb23b fwd="173.252.124.235" dyno= connect= service= status=503 bytes= protocol=https
+2017-11-13T05:15:56.687038+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/?hub.mode=subscribe&hub.challenge=771917174&hub.verify_token=forconvergeconf2017" host=ancient-reef-49335.herokuapp.com request_id=3b8f0389-69a2-4e8b-9838-f6a231b2efb2 fwd="173.252.124.198" dyno= connect= service= status=503 bytes= protocol=https
+2017-11-13T05:15:59.276762+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/?hub.mode=subscribe&hub.challenge=1053855755&hub.verify_token=forconvergeconf2017" host=ancient-reef-49335.herokuapp.com request_id=26e649a7-4fdc-483a-a709-950807c9aeae fwd="173.252.115.41" dyno= connect= service= status=503 bytes= protocol=https
+2017-11-13T05:16:00.355610+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/?hub.mode=subscribe&hub.challenge=393182583&hub.verify_token=forconvergeconf2017" host=ancient-reef-49335.herokuapp.com request_id=40c657c2-2eac-417a-b408-3d4d5b3abe3b fwd="173.252.98.27" dyno= connect= service= status=503 bytes= protocol=https
+2017-11-13T05:16:29.130763+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/?hub.mode=subscribe&hub.challenge=305635962&hub.verify_token=forconvergeconf2017" host=ancient-reef-49335.herokuapp.com request_id=951c7904-187e-4dff-9e40-8b600544b03b fwd="173.252.124.233" dyno= connect= service= status=503 bytes= protocol=https
+2017-11-13T05:17:22.851873+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/?hub.mode=subscribe&hub.challenge=1759529468&hub.verify_token=forconvergeconf2017" host=ancient-reef-49335.herokuapp.com request_id=ad0ea329-746c-42a4-a910-3158e15631e6 fwd="173.252.115.40" dyno= connect= service= status=503 bytes= protocol=https
+2017-11-13T05:17:43.203920+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=ancient-reef-49335.herokuapp.com request_id=718f907c-6f05-4530-80c8-438bab21d1a7 fwd="183.83.205.218" dyno= connect= service= status=503 bytes= protocol=http
+2017-11-13T05:17:44.639284+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=ancient-reef-49335.herokuapp.com request_id=b184c9e5-e626-4e6b-94a5-49cedda98282 fwd="183.83.205.218" dyno= connect= service= status=503 bytes= protocol=http
+2017-11-13T05:17:58.315520+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=ancient-reef-49335.herokuapp.com request_id=3ed9fabf-5bf5-4f7c-8014-ca09cb0b18af fwd="183.83.205.218" dyno= connect= service= status=503 bytes= protocol=http
+2017-11-13T05:17:58.750825+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=ancient-reef-49335.herokuapp.com request_id=37231379-1029-47e3-8922-31de580ef13c fwd="183.83.205.218" dyno= connect= service= status=503 bytes= protocol=http
